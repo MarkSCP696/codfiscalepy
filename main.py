@@ -2,6 +2,7 @@ import json
 import datetime
 import pandas
 import sys
+
 # My custom functions
 import Util.functions
 
@@ -29,4 +30,4 @@ else:
             SurnameJoined = ''.join(aSurname)
             NameJoined = ''.join(aName)
             output = SurnameJoined + NameJoined + aAnno + aMese + aGiorno + aComune + "N"
-            print("CODICE FISCALE : " + output)
+            print('\x1b[6;30;42m' + 'CODICE FISCALE : ' + output + '\x1b[0m')

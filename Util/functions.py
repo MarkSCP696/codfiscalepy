@@ -77,9 +77,9 @@ def GetAnnoMeseGiorno(obj, value):
         splitted = dataNascitaIn.split("-")
         sSesso = json_object["Sesso"]
         if(sSesso.upper() == "F"):
-            splitted[2] += 40
+          splitted[2] = int(splitted[2]) + 40
         convertedMonth = convertMonths(splitted[1])
-        out = [splitted[0][2:4], convertedMonth, splitted[2], True]
+        out = [splitted[0][2:4], convertedMonth, str(splitted[2]), True]
         if(sSesso.upper() != "F" and sSesso.upper() != "M"):
             out = [0, 0, 0, False]
     except ValueError:
